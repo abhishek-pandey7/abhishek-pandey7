@@ -134,7 +134,7 @@ Standard benchmarks like LongBench and SCROLLS miss a critical failure mode: LLM
 
 <div align="center">
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=abhishek-pandey7&show_icons=true&theme=github_dark&hide_border=true&include_all_commits=true&count_private=true"/>
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=abhishek-pandey7&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true"/>
 <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=abhishek-pandey7&layout=compact&theme=github_dark&hide_border=true"/>
 
 </div>
