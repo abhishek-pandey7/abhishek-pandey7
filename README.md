@@ -4,7 +4,7 @@
 <div align="center">
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&color=0D1117&height=200&section=header&text=abhishek@github:~$%20running...&fontColor=39D353&fontSize=20"/>
+  <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=500&size=22&pause=1200&color=58A6FF&center=true&vCenter=true&width=700&lines=Abhishek+Pandey;Full+Stack+%26+AI+Engineer;Building+intelligent+systems;LLMs+%7C+Agents+%7C+Computer+Vision+%7C+RAG;Open+to+internships+%26+collaborations" />
 </p>
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-abhishek--pandey-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/abhishek-pandey-409681332/)
