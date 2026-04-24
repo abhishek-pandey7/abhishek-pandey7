@@ -1,6 +1,6 @@
 <div align="center">
 
-# Hey, I'm Abhishek 👋
+# Abhishek Pandey
 
 <a href="https://git.io/typing-svg">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1600&color=58A6FF&background=0D111700&width=500&lines=Full+Stack+Developer;AI+Engineer;Autonomous+Systems+Builder;Long-Context+LLM+Researcher;Open+to+Internships" alt="Typing SVG" />
@@ -9,61 +9,70 @@
 <br/>
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-abhishek--pandey-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/abhishek-pandey-409681332/)
-[![Email](https://img.shields.io/badge/Email-yahoo-D14836?style=flat-square&logo=yahoo&logoColor=white)](mailto:abhishekpandey.dev@yahoo.com)
+[![Email](https://img.shields.io/badge/Email-abhishekpandey.dev%40yahoo.com-D14836?style=flat-square&logo=yahoo&logoColor=white)](mailto:abhishekpandey.dev@yahoo.com)
 [![LeetCode](https://img.shields.io/badge/LeetCode-102%20solved-FFA116?style=flat-square&logo=leetcode&logoColor=white)](https://leetcode.com/u/abhishekp_7/)
 
-*B.Tech Information Technology · DJSCE Mumbai · CGPA 9.12 / 10.0*
+**B.Tech Information Technology · DJSCE Mumbai · CGPA 9.12 / 10.0**
 
 </div>
 
+<br/>
+
+> I build systems that push the boundaries of what software can do autonomously — from real-time AI pipelines to desktop agents that see, reason, and act like a human. My work spans full stack engineering, computer vision, NLP, and agentic AI, with a relentless focus on making complex systems fast and reliable in production.
+
+Currently researching **long-context reasoning in LLMs** as a mentee at **DJ Init.AI**.
+
+<br/>
+
 ---
 
-I build systems that push what software can do autonomously — from real-time AI pipelines to agents that interact with a desktop the same way a human would. My work spans full stack development, computer vision, NLP, and agentic AI, with a focus on making complex systems fast and reliable in production.
+##  Featured Project — AURA
 
-Currently researching **long-context reasoning in LLMs** as a mentee at DJ Init.AI.
+**Automated Realtime Assistant** · *CLI-based autonomous AI agent*
 
----
+AURA doesn't wait for instructions. It operates on a continuous **Observe → Think → Act → Verify** loop — writing code, running tests, fixing its own failures, and navigating any desktop visually without hardcoded coordinates.
 
-## ⚡ Featured — AURA (Automated Realtime Assistant)
-
-> A CLI-based autonomous AI agent that plans, executes, and self-corrects without manual intervention.
-
-AURA operates on an **Observe → Think → Act → Verify** loop — it can write code, run tests, fix its own failures, and interact with a desktop visually, not through hardcoded coordinates.
-
-| Capability | Details |
+| Module | What it does |
 |---|---|
-| 🗺️ **Desktop Vision Engine** | Generates a spatial map of UI elements for coordinate-based interaction on any app |
-| 🎥 **Imitation Learning** | Watches your workflow via `pynput` and synthesizes it into reusable Python macros using a VLM |
-| 🌐 **Persistent Browser Automation** | Playwright with Chrome profile persistence for authenticated, stateful sessions |
-| 🔁 **Self-Correcting Execution** | Handles multi-hour chains autonomously, adapting on failures |
+|  **Desktop Vision Engine** | Builds a live spatial map of UI elements — works on any app, any resolution |
+|  **Imitation Learning** | Records your workflow via `pynput`, synthesizes it into reusable macros via a VLM |
+|  **Browser Automation** | Playwright + Chrome profile persistence for authenticated, stateful web sessions |
+|  **Self-Correcting Execution** | Recovers from failures mid-chain — runs autonomously for hours without babysitting |
 
 `Python` `Playwright` `PyAutoGUI` `OpenCV` `OCR` `OpenAI-compatible LLMs`
 
+<br/>
+
 ---
 
-## 🗂️ Project Portfolio
+## Projects
 
-| Project | Description | Stack |
+| Project | What I built | Stack |
 |---|---|---|
-| **Spine-Guard** | Real-time physiotherapy monitor — 33 body landmarks, sub-30ms WebSocket inference, multimodal clinical AI assistant | React, FastAPI, MediaPipe, LangGraph, Gemini |
-| **PhishNet** | Real-time phishing & deepfake detection using NLP + audio spectral analysis (MFCC, spectral flatness, ZCR) | React, FastAPI, PyTorch, HuggingFace, Librosa |
-| **Zero-Trust PII RAG** | Privacy-preserving RAG pipeline — PII masked via cryptographic tokens locally before any LLM call | Python, LangChain, ChromaDB, Presidio, Flask |
-| **Football Advisor MAS** | 6-stage sequential multi-agent pipeline for football scouting, tactics, and transfer analysis | Google ADK, Gemini 2.0, FastAPI |
-| **MoodTune** | Emotion-driven music recommendations via voice transcription + sentiment analysis | Flask, Vosk, Gemini API, Spotify API |
+| **Spine-Guard** | Real-time physiotherapy monitor — 33-landmark pose tracking, sub-30ms WebSocket inference, multimodal clinical AI assistant | React · FastAPI · MediaPipe · LangGraph · Gemini |
+| **PhishNet** | Dual-threat detector combining NLP-based phishing analysis with deepfake audio detection via MFCC, spectral flatness, and ZCR | React · FastAPI · PyTorch · HuggingFace · Librosa |
+| **Zero-Trust PII RAG** | Privacy-first RAG pipeline — all PII is cryptographically tokenized locally before any data reaches an LLM | Python · LangChain · ChromaDB · Presidio · Flask |
+| **Football Advisor MAS** | 6-stage multi-agent system for scouting, tactical analysis, and transfer market intelligence | Google ADK · Gemini 2.0 · FastAPI |
+| **MoodTune** | Voice-first music discovery — transcribes speech, infers emotional state, surfaces matched Spotify tracks | Flask · Vosk · Gemini API · Spotify API |
+
+<br/>
 
 ---
 
-## 🔬 Research
+## Research
 
-**Position-Aware Benchmarking for Long-Context LLMs** *(2025 – Present)*
+### Position-Aware Benchmarking for Long-Context LLMs
+*DJ Init.AI · 2025 – Present*
 
-Investigating the *Lost in the Middle* phenomenon across 32K–1M token contexts. Built a custom evaluation framework validating U-shaped performance curves with up to **30% mid-context accuracy degradation** — undetected by standard benchmarks like LongBench and SCROLLS.
+Standard benchmarks like LongBench and SCROLLS miss a critical failure mode: LLMs systematically lose information buried in the middle of long contexts. I'm building a custom evaluation framework that exposes this — validating **U-shaped performance curves** across 32K–1M token windows, with up to **30% accuracy degradation at mid-context positions** that existing evals simply don't catch.
 
-*DJ Init.AI Research Mentee*
+*Investigating the* ***Lost in the Middle*** *phenomenon.*
+
+<br/>
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 <div align="center">
 
@@ -115,10 +124,27 @@ Investigating the *Lost in the Middle* phenomenon across 32K–1M token contexts
 
 </div>
 
+<br/>
+
+---
+
+## GitHub Stats
+
+<div align="center">
+
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=abhishekp-786&show_icons=true&theme=github_dark&hide_border=true&include_all_commits=true&count_private=true"/>
+<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=abhishekp-786&layout=compact&theme=github_dark&hide_border=true"/>
+
+</div>
+
+<br/>
+
 ---
 
 <div align="center">
 
-*Based in Mumbai, India · Open to internships and collaborations*
+*Mumbai, India · Open to internships and collaborations*
+<br/>
+<sub>If you're building something ambitious, let's talk.</sub>
 
 </div>
