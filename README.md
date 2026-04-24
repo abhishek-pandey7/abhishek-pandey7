@@ -14,22 +14,22 @@
 
 ---
 
-I build systems that push what software can do autonomously — from real-time AI pipelines to agents that interact with a desktop the same way a human would. My work spans full stack development, computer vision, NLP, and agentic AI, with a focus on making complex systems fast and reliable in production.
+I build systems that push what software can do autonomously, from real-time AI pipelines to agents that interact with a desktop the same way a human would. My work spans full stack development, computer vision, NLP, and agentic AI, with a focus on making complex systems fast and reliable in production.
 
 Currently researching **long-context reasoning in LLMs** as a mentee at DJ Init.AI.
 
 ---
 
-## Featured — AURA (Automated Realtime Assistant)
+## Featured - AURA (Automated Realtime Assistant)
 
 > A CLI-based autonomous AI agent that plans, executes, and self-corrects without manual intervention.
 
-AURA operates on an **Observe → Think → Act → Verify** loop — it can write code, run tests, fix its own failures, and interact with a desktop visually, not through hardcoded coordinates.
+AURA operates on an **Observe → Think → Act → Verify** loop, it can write code, run tests, fix its own failures, and interact with a desktop visually, not through hardcoded coordinates.
 
-- **Desktop Vision Engine** — generates a spatial map of UI elements for coordinate-based interaction on any app
-- **Imitation Learning** — watches your workflow via `pynput` and synthesizes it into reusable Python macros using a VLM
-- **Persistent Browser Automation** — Playwright with Chrome profile persistence for authenticated, stateful sessions
-- **Self-Correcting Execution** — handles multi-hour chains autonomously, adapting on failures
+- **Desktop Vision Engine** - generates a spatial map of UI elements for coordinate-based interaction on any app
+- **Imitation Learning** - watches your workflow via `pynput` and synthesizes it into reusable Python macros using a VLM
+- **Persistent Browser Automation** - Playwright with Chrome profile persistence for authenticated, stateful sessions
+- **Self-Correcting Execution** - handles multi-hour chains autonomously, adapting on failures
 
 `Python` `Playwright` `PyAutoGUI` `OpenCV` `OCR` `OpenAI-compatible LLMs`
 
@@ -39,9 +39,9 @@ AURA operates on an **Observe → Think → Act → Verify** loop — it can wri
 
 | Project | Description | Stack |
 |---|---|---|
-| **Spine-Guard** | Real-time physiotherapy monitor — 33 body landmarks, sub-30ms WebSocket inference, multimodal clinical AI assistant | React, FastAPI, MediaPipe, LangGraph, Gemini |
+| **Spine-Guard** | Real-time physiotherapy monitor, 33 body landmarks, sub-30ms WebSocket inference, multimodal clinical AI assistant | React, FastAPI, MediaPipe, LangGraph, Gemini |
 | **PhishNet** | Real-time phishing & deepfake detection using NLP + audio spectral analysis (MFCC, spectral flatness, ZCR) | React, FastAPI, PyTorch, HuggingFace, Librosa |
-| **Zero-Trust PII RAG** | Privacy-preserving RAG pipeline — PII masked via cryptographic tokens locally before any LLM call | Python, LangChain, ChromaDB, Presidio, Flask |
+| **Zero-Trust PII RAG** | Privacy-preserving RAG pipeline, PII masked via cryptographic tokens locally before any LLM call | Python, LangChain, ChromaDB, Presidio, Flask |
 | **Football Advisor MAS** | 6-stage sequential multi-agent pipeline for football scouting, tactics, and transfer analysis | Google ADK, Gemini 2.0, FastAPI |
 | **MoodTune** | Emotion-driven music recommendations via voice transcription + sentiment analysis | Flask, Vosk, Gemini API, Spotify API |
 
