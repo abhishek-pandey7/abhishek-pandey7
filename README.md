@@ -36,7 +36,7 @@ AURA operates on an **Observe → Think → Act → Verify** loop — it can wri
 ---
 
 ## Project Portfolio
- 
+
 | Project | Description | Stack |
 |---|---|---|
 | **Spine-Guard** | Real-time physiotherapy monitor — 33 body landmarks, sub-30ms WebSocket inference, multimodal clinical AI assistant | React, FastAPI, MediaPipe, LangGraph, Gemini |
@@ -44,6 +44,7 @@ AURA operates on an **Observe → Think → Act → Verify** loop — it can wri
 | **Zero-Trust PII RAG** | Privacy-preserving RAG pipeline — PII masked via cryptographic tokens locally before any LLM call | Python, LangChain, ChromaDB, Presidio, Flask |
 | **Football Advisor MAS** | 6-stage sequential multi-agent pipeline for football scouting, tactics, and transfer analysis | Google ADK, Gemini 2.0, FastAPI |
 | **MoodTune** | Emotion-driven music recommendations via voice transcription + sentiment analysis | Flask, Vosk, Gemini API, Spotify API |
+
 ---
 
 ## Research
@@ -58,16 +59,55 @@ Investigating the *Lost in the Middle* phenomenon across 32K–1M token contexts
 
 ## Tech Stack
 
-```
-Languages      Python · JavaScript · C++ · C
-Frontend       React.js · Tailwind CSS · HTML/CSS · jQuery
-Backend        FastAPI · Flask · Node.js · Express.js · REST APIs
-Databases      PostgreSQL · MongoDB · SQLite · ChromaDB · Supabase
-AI/ML          LangChain · LangGraph · Google ADK · Scikit-learn · PyTorch
-               HuggingFace · MediaPipe · YOLOv8 · OpenCV · Librosa
-Tools          Git · Playwright · Docker · Jupyter · Google Colab
-Other          AR Development · Multilingual Apps · Audio Analysis
-```
+<div align="center">
+
+**Languages**
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
+![C](https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black)
+
+**Frontend**
+
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![jQuery](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
+
+**Backend**
+
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+
+**Databases**
+
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
+
+**AI / ML**
+
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
+![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
+![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
+
+**Tools**
+
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
+![Google Colab](https://img.shields.io/badge/Google_Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=black)
+![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white)
+
+</div>
 
 ---
 
