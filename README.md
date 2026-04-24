@@ -3,7 +3,7 @@
 # Abhishek Pandey
 
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1600&color=58A6FF&background=0D111700&width=500&lines=Full+Stack+Developer;AI+Engineer;Autonomous+Systems+Builder;Long-Context+LLM+Researcher;Open+to+Internships" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=14&pause=1000&color=39D353&background=0D1117&width=500&height=120&lines=~+%24+whoami;%3E+Abhishek+Pandey+%7C+Full+Stack+%26+AI+Engineer;~+%24+cat+skills.txt;%3E+LLMs+%7C+Agents+%7C+Computer+Vision+%7C+RAG;~+%24+ls+projects%2F;%3E+AURA+SpineGuard+PhishNet+ZeroTrust;~+%24+echo+%24STATUS;%3E+Open+to+internships+%26+collaborations" alt="Terminal Typing SVG" />
 </a>
 
 <br/>
