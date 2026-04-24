@@ -4,7 +4,7 @@
 <div align="center">
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=14&duration=3000&pause=800&color=39D353&background=0D1117&center=true&vCenter=true&multiline=true&width=700&height=180&lines=abhishek%40github%3A~%24+whoami;Abhishek+Pandey+-+Full+Stack+%26+AI+Engineer;abhishek%40github%3A~%24+cat+skills.txt;LLMs+%7C+Agents+%7C+Computer+Vision+%7C+RAG;abhishek%40github%3A~%24+ls+projects%2F;AURA+SpineGuard+PhishNet+ZeroTrust;abhishek%40github%3A~%24+echo+%24status;Open+to+internships+%26+collaborations" />
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=0D1117&height=200&section=header&text=abhishek@github:~$%20running...&fontColor=39D353&fontSize=20"/>
 </p>
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-abhishek--pandey-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/abhishek-pandey-409681332/)
