@@ -3,9 +3,9 @@
 </p>
 <div align="center">
 
-<a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=14&pause=1000&color=39D353&background=0D1117&width=500&height=120&lines=~+%24+whoami;%3E+Abhishek+Pandey+%7C+Full+Stack+%26+AI+Engineer;~+%24+cat+skills.txt;%3E+LLMs+%7C+Agents+%7C+Computer+Vision+%7C+RAG;~+%24+ls+projects%2F;%3E+AURA+SpineGuard+PhishNet+ZeroTrust;~+%24+echo+%24STATUS;%3E+Open+to+internships+%26+collaborations" alt="Terminal Typing SVG" />
-</a>
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=14&duration=3000&pause=800&color=39D353&background=0D1117&center=true&vCenter=true&multiline=true&width=700&height=180&lines=abhishek%40github%3A~%24+whoami;Abhishek+Pandey+-+Full+Stack+%26+AI+Engineer;abhishek%40github%3A~%24+cat+skills.txt;LLMs+%7C+Agents+%7C+Computer+Vision+%7C+RAG;abhishek%40github%3A~%24+ls+projects%2F;AURA+SpineGuard+PhishNet+ZeroTrust;abhishek%40github%3A~%24+echo+%24status;Open+to+internships+%26+collaborations" />
+</p>
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-abhishek--pandey-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/abhishek-pandey-409681332/)
 [![Email](https://img.shields.io/badge/Email-abhishekpandey.dev%40yahoo.com-D14836?style=flat-square&logo=yahoo&logoColor=white)](mailto:abhishekpandey.dev@yahoo.com)
