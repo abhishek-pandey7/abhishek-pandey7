@@ -2,7 +2,11 @@
 
 # Hey, I'm Abhishek 👋
 
-**Full Stack Developer · AI Engineer · Autonomous Systems**
+<a href="https://git.io/typing-svg">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1600&color=58A6FF&background=0D111700&width=500&lines=Full+Stack+Developer;AI+Engineer;Autonomous+Systems+Builder;Long-Context+LLM+Researcher;Open+to+Internships" alt="Typing SVG" />
+</a>
+
+<br/>
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-abhishek--pandey-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/abhishek-pandey-409681332/)
 [![Email](https://img.shields.io/badge/Email-yahoo-D14836?style=flat-square&logo=yahoo&logoColor=white)](mailto:abhishekpandey.dev@yahoo.com)
@@ -14,50 +18,52 @@
 
 ---
 
-I build systems that push what software can do autonomously, from real-time AI pipelines to agents that interact with a desktop the same way a human would. My work spans full stack development, computer vision, NLP, and agentic AI, with a focus on making complex systems fast and reliable in production.
+I build systems that push what software can do autonomously — from real-time AI pipelines to agents that interact with a desktop the same way a human would. My work spans full stack development, computer vision, NLP, and agentic AI, with a focus on making complex systems fast and reliable in production.
 
 Currently researching **long-context reasoning in LLMs** as a mentee at DJ Init.AI.
 
 ---
 
-## Featured - AURA (Automated Realtime Assistant)
+## ⚡ Featured — AURA (Automated Realtime Assistant)
 
 > A CLI-based autonomous AI agent that plans, executes, and self-corrects without manual intervention.
 
-AURA operates on an **Observe → Think → Act → Verify** loop, it can write code, run tests, fix its own failures, and interact with a desktop visually, not through hardcoded coordinates.
+AURA operates on an **Observe → Think → Act → Verify** loop — it can write code, run tests, fix its own failures, and interact with a desktop visually, not through hardcoded coordinates.
 
-- **Desktop Vision Engine** - generates a spatial map of UI elements for coordinate-based interaction on any app
-- **Imitation Learning** - watches your workflow via `pynput` and synthesizes it into reusable Python macros using a VLM
-- **Persistent Browser Automation** - Playwright with Chrome profile persistence for authenticated, stateful sessions
-- **Self-Correcting Execution** - handles multi-hour chains autonomously, adapting on failures
+| Capability | Details |
+|---|---|
+| 🗺️ **Desktop Vision Engine** | Generates a spatial map of UI elements for coordinate-based interaction on any app |
+| 🎥 **Imitation Learning** | Watches your workflow via `pynput` and synthesizes it into reusable Python macros using a VLM |
+| 🌐 **Persistent Browser Automation** | Playwright with Chrome profile persistence for authenticated, stateful sessions |
+| 🔁 **Self-Correcting Execution** | Handles multi-hour chains autonomously, adapting on failures |
 
 `Python` `Playwright` `PyAutoGUI` `OpenCV` `OCR` `OpenAI-compatible LLMs`
 
 ---
 
-## Project Portfolio
+## 🗂️ Project Portfolio
 
 | Project | Description | Stack |
 |---|---|---|
-| **Spine-Guard** | Real-time physiotherapy monitor, 33 body landmarks, sub-30ms WebSocket inference, multimodal clinical AI assistant | React, FastAPI, MediaPipe, LangGraph, Gemini |
+| **Spine-Guard** | Real-time physiotherapy monitor — 33 body landmarks, sub-30ms WebSocket inference, multimodal clinical AI assistant | React, FastAPI, MediaPipe, LangGraph, Gemini |
 | **PhishNet** | Real-time phishing & deepfake detection using NLP + audio spectral analysis (MFCC, spectral flatness, ZCR) | React, FastAPI, PyTorch, HuggingFace, Librosa |
-| **Zero-Trust PII RAG** | Privacy-preserving RAG pipeline, PII masked via cryptographic tokens locally before any LLM call | Python, LangChain, ChromaDB, Presidio, Flask |
+| **Zero-Trust PII RAG** | Privacy-preserving RAG pipeline — PII masked via cryptographic tokens locally before any LLM call | Python, LangChain, ChromaDB, Presidio, Flask |
 | **Football Advisor MAS** | 6-stage sequential multi-agent pipeline for football scouting, tactics, and transfer analysis | Google ADK, Gemini 2.0, FastAPI |
 | **MoodTune** | Emotion-driven music recommendations via voice transcription + sentiment analysis | Flask, Vosk, Gemini API, Spotify API |
 
 ---
 
-## Research
+## 🔬 Research
 
 **Position-Aware Benchmarking for Long-Context LLMs** *(2025 – Present)*
 
-Investigating the *Lost in the Middle* phenomenon across 32K–1M token contexts. Built a custom evaluation framework validating U-shaped performance curves with up to 30% mid-context accuracy degradation, undetected by standard benchmarks like LongBench and SCROLLS.
+Investigating the *Lost in the Middle* phenomenon across 32K–1M token contexts. Built a custom evaluation framework validating U-shaped performance curves with up to **30% mid-context accuracy degradation** — undetected by standard benchmarks like LongBench and SCROLLS.
 
 *DJ Init.AI Research Mentee*
 
 ---
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 <div align="center">
 
