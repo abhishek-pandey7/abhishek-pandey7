@@ -39,7 +39,7 @@ A system that acts on your behalf should be able to say what it saw, what it dec
 </tr>
 <tr>
 <td><b>Global Pathway Solutions</b><br/><sub>SWE & AI Research Intern</sub></td>
-<td>Prototyped hybrid OCR parsers, multi-model Socratic dialogue systems, and high-performance retrieval engines for EdTech platforms, under an Agile Scrum workflow.</td>
+<td>Prototyped hybrid OCR parsers, multi-model Socratic dialogue systems, and high-performance retrieval engines for EdTech platforms, under an Agile Scrum workflow. Currently scoping an agentic marketing pipeline for competition outreach: a research pass that combines the quantitative records already held in-house with scraped qualitative signal from vetted sources (participating nations and schools, skills a competition actually tests, difficulty banding, past entrant testimonials), feeding a generation pass that rewrites the existing brochure collateral into short-form copy, WhatsApp posts, long-form email, a spoken script, and multiple ad variants for A/B testing.</td>
 </tr>
 <tr>
 <td><b>DJ Init.AI</b><br/><sub>AI Research Mentee</sub></td>
