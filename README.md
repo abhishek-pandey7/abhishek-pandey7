@@ -93,41 +93,49 @@ Most agent demos work once, on the recorded run, at the recorded resolution. AUR
 
 <table>
 <tr><td width="150"><b>Zero-Trust PII RAG</b></td>
-<td>Redacts and masks PII locally with Microsoft Presidio and a thread-safe SQLite vault, before any text reaches an external LLM. Handles files past 1M characters.<br/>
+<td>Redacts and masks PII locally with Microsoft Presidio and a thread-safe SQLite vault, before any text reaches an external LLM. The model only ever sees opaque tokens like <code>&lt;&lt;PERSON_01_A1B2&gt;&gt;</code>, which the vault maps back to plaintext locally on the way out, so the sensitive string never crosses the network boundary and every redaction and lookup is audit-logged. Handles files past 1M characters.
+<br/>
 <code>Python</code> <code>Flask</code> <code>LangChain</code> <code>ChromaDB</code> <code>SQLite</code> <code>Presidio</code><br/>
 <a href="https://github.com/abhishek-pandey7/Zero-Trust-PII-RAG">repo</a> &middot; <a href="https://zero-trust-pii-rag.onrender.com/">live</a></td></tr>
 
 <tr><td><b>Fluxion</b></td>
-<td>Infrastructure-as-code generator that transpiles YAML specs into Snowflake SQL, dbt models, and Airflow DAGs, automating pipelines that would otherwise be written by hand.<br/>
-<code>TypeScript</code> <code>React</code> <code>dbt</code> <code>Snowflake</code> <code>Airflow</code><br/>
+<td>Generates a whole data pipeline from one declarative YAML spec: idempotent Snowflake SQL, incremental dbt models with schema tests, and Airflow TaskFlow DAGs, so a pipeline is described once instead of hand-written three times. An LLM pass validates the spec first and proposes clustering keys and warehouse sizing, then approved assets commit straight to a feature branch to trigger existing CI.
+<br/>
+<code>TypeScript</code> <code>React</code> <code>Groq</code> <code>dbt</code> <code>Snowflake</code> <code>Airflow</code><br/>
 <a href="https://github.com/abhishek-pandey7/Fluxion">repo</a> &middot; <a href="https://fluxion-lilac.vercel.app/">live</a></td></tr>
 
 <tr><td><b>MSAG</b></td>
-<td>Multi-tenant portal and public storefront for the Matti Sirviö Art Gallery, Muscat. Role-based JWT auth, a maker-checker audit workflow, and an on-the-fly WebP image proxy that cut load times 40%.<br/>
-<code>Next.js 14</code> <code>React</code> <code>Express</code> <code>Prisma</code> <code>PostgreSQL</code> <code>Cloudflare R2</code><br/>
+<td>Public storefront and curator console for the Matti Sirvi&ouml; Art Gallery, Muscat and Helsinki, running at the edge on Cloudflare Workers. Curators push artwork scans straight to R2 through presigned URLs so large files never touch compute, masters stay untouched while public delivery is resized to WebP on the fly, and a maker-checker approval workflow with an audit log sits behind every catalogue change.
+<br/>
+<code>Astro</code> <code>React 19</code> <code>Hono</code> <code>Cloudflare Workers</code> <code>Prisma</code> <code>Neon Postgres</code> <code>Cloudflare R2</code><br/>
 <a href="https://mattisirvioartgalleria.com/">live</a></td></tr>
 
 <tr><td><b>OJAS</b></td>
-<td>Objective judgement for academic sincerity: ranks exam-hall CCTV footage for human review instead of trying to auto-convict, with a signed custody ledger behind every verdict.<br/>
+<td>Objective judgement for academic sincerity: ranks exam-hall CCTV footage for human review instead of trying to auto-convict, with a signed custody ledger behind every verdict. One exam session can generate 9,600 camera-hours, so the real problem is deciding where a reviewer's few hours go, and the pipeline abstains rather than guess whenever the footage will not support a threshold.
+<br/>
 <code>Python</code> <code>Go</code> <code>Next.js</code> <code>OpenCV</code> <code>YOLOv8n</code> <code>Ed25519</code><br/>
 <a href="https://github.com/abhishek-pandey7/Objective-Judgement-for-Academic-Security">repo</a></td></tr>
 
 <tr><td><b>Sunzee Holidays</b></td>
-<td>Travel platform for a B2B agency in Mauritius. Responsive exotic-luxury magazine design, custom marquees, parallax and scroll reveals, WhatsApp API booking.<br/>
+<td>Marketing platform for a B2B travel agency selling East Africa and the Indian Ocean. Five destination landing routes generate from a single composable shell rather than five hand-maintained pages, on a custom design system rather than a themed template, with scroll reveals wired so content is still present at first paint for crawlers.
+<br/>
 <code>Next.js</code> <code>Tailwind CSS</code> <code>Framer Motion</code> <code>shadcn/ui</code></td></tr>
 
 <tr><td><b>Football Advisor MAS</b></td>
-<td>Multi-agent system on Google ADK coordinating specialist agents (input, scouting, tactics, finance) to answer natural-language football queries and suggest tactical counters.<br/>
+<td>Multi-agent system on Google ADK coordinating specialist agents (input, opposition, tactics, scouting, finance) to answer natural-language football queries and suggest tactical counters. Naming an opponent triggers a research pass on how they actually play, and a financial agent audits the shortlist against the stated budget so nothing comes back that the club cannot afford.
+<br/>
 <code>Google ADK</code> <code>React</code> <code>Python</code> <code>Gemini</code><br/>
 <a href="https://github.com/abhishek-pandey7/Football-Advisor-MAS">repo</a></td></tr>
 
 <tr><td><b>SpineIQ</b></td>
-<td>Spinal rehab ecosystem tracking 33 skeletal landmarks in real time with MediaPipe Pose, streaming metrics over WebSocket at sub-30ms latency, with a clinical dashboard and a recovery chatbot.<br/>
+<td>Spinal rehab ecosystem tracking 33 skeletal landmarks in real time with MediaPipe Pose, streaming metrics over WebSocket at sub-30ms latency, with a clinical dashboard and a recovery chatbot. Form is scored across 20+ prescribed exercises so a dropped hip or an over-arched back is corrected as it happens rather than at the next appointment.
+<br/>
 <code>React</code> <code>FastAPI</code> <code>MediaPipe</code> <code>LangGraph</code> <code>Supabase</code> <code>Gemini</code><br/>
 <a href="https://github.com/abhishek-pandey7/Spine-Guard">repo</a></td></tr>
 
 <tr><td><b>CampusNav</b></td>
-<td>Browser-based AR campus navigation overlaying directional cues on the live camera feed, using DeviceOrientation compass tracking, OSRM road routing, and spoken prompts.<br/>
+<td>Browser-based AR campus navigation overlaying directional cues on the live camera feed, using DeviceOrientation compass tracking, OSRM road routing, and spoken prompts. Real road paths fall back to a straight-line bearing when routing fails, voice announcements fire at distance milestones, and a one-tap emergency mode routes to the nearest hospital, pharmacy or police station.
+<br/>
 <code>JavaScript</code> <code>HTML5/CSS3</code> <code>OSRM API</code> <code>Geolocation API</code><br/>
 <a href="https://github.com/abhishek-pandey7/CampusNav">repo</a></td></tr>
 </table>
