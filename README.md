@@ -34,7 +34,7 @@ A system that acts on your behalf should be able to say what it saw, what it dec
 
 <table>
 <tr>
-<td width="190"><b>Jireh Studios</b><br/><sub>Co-Founder & Full Stack Engineer</sub></td>
+<td width="190"><b>Jireh Studios</b><br/><sub>Co-Founder & Software Lead</sub></td>
 <td>Four products across travel, commerce and operations. The largest is Misba, a 205k-LOC production travel and OTA platform (three NestJS services behind five Angular portals, 20+ GDS and consolidator integrations across seven verticals, query logic centralised in an internal GraphQL data-graph and exposed as REST facades), where my work is defect triage and maintenance rather than authorship. MSAG I own end to end: edge-native on Hono and Cloudflare Workers with Neon serverless Postgres, a request-scoped Prisma client on AsyncLocalStorage and an ES6 Proxy so concurrent requests sharing a V8 isolate stop leaking state into each other, and 15MB artwork scans that upload straight to R2 through presigned URLs without touching compute. Astro islands serve the storefront, React 19 the admin console. Sunzee Holidays, below, is mine too, as is Kirana Commerce, a three-role grocery operations prototype where money is integer paise and weight integer grams, because nothing that floats belongs near a bill.</td>
 </tr>
 <tr>
@@ -125,14 +125,6 @@ Most agent demos work once, on the recorded run, at the recorded resolution. AUR
 <td>Spinal rehab ecosystem tracking 33 skeletal landmarks in real time with MediaPipe Pose, streaming metrics over WebSocket at sub-30ms latency, with a clinical dashboard and a recovery chatbot.<br/>
 <code>React</code> <code>FastAPI</code> <code>MediaPipe</code> <code>LangGraph</code> <code>Supabase</code> <code>Gemini</code><br/>
 <a href="https://github.com/abhishek-pandey7/Spine-Guard">repo</a></td></tr>
-
-<tr><td><b>PhishNet</b></td>
-<td>Multi-modal security platform catching phishing emails via NLP and synthetic-voice deepfakes via audio feature analysis: MFCC variance, spectral flatness, zero-crossing rate.<br/>
-<code>React</code> <code>FastAPI</code> <code>PyTorch</code> <code>HuggingFace</code> <code>Librosa</code></td></tr>
-
-<tr><td><b>Reply Truman</b></td>
-<td>Adaptive sender-profiling system built for the Reply Code Challenge. Fraud detection plus LLM reranking of suspicious activity, wired to Langfuse for observability.<br/>
-<code>Python</code> <code>scikit-learn</code> <code>LangChain</code> <code>pandas</code> <code>Langfuse</code></td></tr>
 
 <tr><td><b>CampusNav</b></td>
 <td>Browser-based AR campus navigation overlaying directional cues on the live camera feed, using DeviceOrientation compass tracking, OSRM road routing, and spoken prompts.<br/>
