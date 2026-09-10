@@ -35,7 +35,7 @@ A system that acts on your behalf should be able to say what it saw, what it dec
 <table>
 <tr>
 <td width="190"><b>Jireh Studios</b><br/><sub>Co-Founder & Full Stack Engineer</sub></td>
-<td>Architecting multi-tenant web platforms, serverless backend engines, and automated performance optimization pipelines. Two of the platforms below, MSAG and Sunzee Holidays, shipped out of this.</td>
+<td>Four products across travel, commerce and operations. The largest is Misba, a 205k-LOC production travel and OTA platform &mdash; three NestJS services behind five Angular portals, 20+ GDS and consolidator integrations normalised across seven verticals, query logic centralised in an internal GraphQL data-graph and exposed as Swagger-documented REST facades &mdash; where my work is defect triage and maintenance rather than authorship: following a booking from a portal click through a policy engine, a wallet ledger, and each supplier's own idea of what a fare looks like. MSAG and Sunzee Holidays, below, I built outright. So is Kirana Commerce, a three-role grocery operations prototype where money is integer paise and weight integer grams, because nothing that floats belongs near a bill.</td>
 </tr>
 <tr>
 <td><b>Global Pathway Solutions</b><br/><sub>SWE & AI Research Intern</sub></td>
