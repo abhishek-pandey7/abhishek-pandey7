@@ -167,17 +167,19 @@ The result reproduced and quantified "lost in the middle": up to 30% accuracy de
   />
 </p>
 
+<!--
 No logo exists for the half that mattered most: the Observe/Think/Act/Verify loop itself, Presidio-based PII redaction ahead of retrieval, position-aware long-context evaluation, and Maker-Checker audit workflows.
+-->
 
 ---
 
 ## Reach me
 
-|  |  |  |
-| :-: | --- | --- |
-| <img src="https://raw.githubusercontent.com/abhishek-pandey7/abhishek-pandey7/main/mail.svg" height="20" alt=""/> | **mail** | [abhishekpandey.dev@yahoo.com](mailto:abhishekpandey.dev@yahoo.com) |
-| <img src="https://raw.githubusercontent.com/abhishek-pandey7/abhishek-pandey7/main/linkedin.svg" height="20" alt=""/> | **linkedin** | [/in/abhishek-pandey-409681332](https://www.linkedin.com/in/abhishek-pandey-409681332/) |
-| <img src="https://cdn.simpleicons.org/github/f0b429" height="20" alt=""/> | **github** | [/abhishek-pandey7](https://github.com/abhishek-pandey7) |
-| <img src="https://cdn.simpleicons.org/leetcode/f0b429" height="20" alt=""/> | **leetcode** | [/u/abhishekp_7](https://leetcode.com/u/abhishekp_7/) |
+<table>
+<tr><td><b>mail</b></td><td><a href="mailto:abhishekpandey.dev@yahoo.com">abhishekpandey.dev@yahoo.com</a></td></tr>
+<tr><td><b>linkedin</b></td><td><a href="https://www.linkedin.com/in/abhishek-pandey-409681332/">/in/abhishek-pandey-409681332</a></td></tr>
+<tr><td><b>github</b></td><td><a href="https://github.com/abhishek-pandey7">/abhishek-pandey7</a></td></tr>
+<tr><td><b>leetcode</b></td><td><a href="https://leetcode.com/u/abhishekp_7">/u/abhishekp_7</a></td></tr>
+</table>
 
 *Mumbai, India. Open to internships and collaborations, if you're building something ambitious.*
