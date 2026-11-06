@@ -22,9 +22,9 @@
   &nbsp;&nbsp;<a href="https://leetcode.com/u/abhishekp_7/"><img src="https://cdn.simpleicons.org/leetcode/f0b429" height="22" alt="leetcode"/></a>
 </p>
 
-A system that acts on your behalf should be able to say what it saw, what it decided, and why the next step followed from the last one. That is what the four things below have in common: an agent that narrates its own reasoning while it operates a desktop, a RAG pipeline that redacts before it retrieves, a benchmark harness that measures where long context actually fails, and a handful of production systems built for people who are not going to read the logs.
+A system that acts on your behalf should be able to say what it saw, what it decided, and why the next step followed from the last one. That is what the work below has in common: an agent that plans its steps and asks before anything it cannot undo, a wealth tracker that derives every number from a ledger, a radar scheduler that can show the score behind every look it takes, a benchmark harness that measures where long context actually fails, and a handful of production systems built for people who are not going to read the logs.
 
-**01** [Experience](#experience) &nbsp;&nbsp;&middot;&nbsp;&nbsp; **02** [AURA](#aura), the featured build &nbsp;&nbsp;&middot;&nbsp;&nbsp; **03** [Other projects](#projects) &nbsp;&nbsp;&middot;&nbsp;&nbsp; **04** [Research](#research) &nbsp;&nbsp;&middot;&nbsp;&nbsp; **05** [Stack](#stack)
+**01** [Experience](#experience) &nbsp;&nbsp;&middot;&nbsp;&nbsp; **02** [Featured](#featured), three builds &nbsp;&nbsp;&middot;&nbsp;&nbsp; **03** [Other projects](#projects) &nbsp;&nbsp;&middot;&nbsp;&nbsp; **04** [Research](#research) &nbsp;&nbsp;&middot;&nbsp;&nbsp; **05** [Stack](#stack)
 
 ---
 
@@ -55,35 +55,91 @@ A system that acts on your behalf should be able to say what it saw, what it dec
 
 ---
 
-<a id="aura"></a>
+<a id="featured"></a>
 
-## AURA
-### Automated Realtime Assistant &nbsp;&middot;&nbsp; CLI-based autonomous desktop agent
+## Featured
 
-Most agent demos work once, on the recorded run, at the recorded resolution. AURA is built around a loop instead of a script: it observes the screen, decides the next step, acts on the operating system, then checks whether that step actually worked before deciding the one after it. That loop is what lets it run unattended for hours and recover from its own mistakes mid-chain, rather than stalling the first time a button moves three pixels.
+### AURA
+*Autonomous agent for the shell, the browser and the desktop*
+
+Most agent demos work once, on the recorded run, at the recorded resolution. AURA takes a plain-English goal, plans it into up to ten ordered subtasks, then works through each one in a ReAct loop across 35 tools, reading every result before it chooses the next step. It acts as you, in your real Chrome profile and Google account, and it stops and asks before anything it cannot undo.
 
 <p align="center">
   <img
-    src="https://raw.githubusercontent.com/abhishek-pandey7/abhishek-pandey7/main/otav.svg"
+    src="https://raw.githubusercontent.com/abhishek-pandey7/AURA-Automated-Realtime-Assistant/main/docs/demos/voice-cnn.gif"
     width="900"
-    alt="Observe, Think, Act, Verify loop with a self-correct path back from Verify to Think"
+    alt="AURA taking a spoken request in the terminal, planning it, and writing a PyTorch CNN for MNIST"
   />
 </p>
 
 <table>
-<tr><td width="190"><b>Desktop vision engine</b></td>
-<td>Builds a live spatial coordinate map of UI elements and text with OpenCV and OCR, so the agent can navigate any application regardless of screen resolution.</td></tr>
-<tr><td><b>Imitation learning</b></td>
-<td>Listens to keyboard and mouse input through <code>pynput</code>, records organic user workflows, and synthesizes them into reusable PyAutoGUI macros with a vision-language model.</td></tr>
-<tr><td><b>Browser automation</b></td>
-<td>Drives headless and headed browser sessions with Playwright, carrying over Chrome profile cookies and session state to operate as an authenticated user.</td></tr>
-<tr><td><b>Self-correction</b></td>
-<td>Reads terminal stdout and stderr as it runs, debugs execution errors mid-chain, and keeps going without a human in the loop.</td></tr>
+<tr><td width="190"><b>Desktop perception</b></td>
+<td>Native Windows OCR turns the screen into a map of every text line and its pixel position, so the agent can click by coordinates in apps with no API, and reading the screen costs no tokens. A vision model is the fallback for purely graphical screens.</td></tr>
+<tr><td><b>Watch and learn</b></td>
+<td>Record yourself doing a task once. A vision model turns the clicks, keystrokes and screenshots into a Python tool, which registers on the spot with no restart.</td></tr>
+<tr><td><b>Browser and accounts</b></td>
+<td>Drives your real Chrome profile with Playwright, logins and cookies included, and reaches Gmail, Calendar, Meet and Forms over OAuth.</td></tr>
+<tr><td><b>Guardrails</b></td>
+<td>Deletes, <code>sudo</code>, <code>git push</code> and package installs always ask, even with safe mode off. A 30-iteration cap stops a confused model from looping forever, and sessions save after every message so an interrupted run can resume.</td></tr>
 </table>
 
-`Python` `Playwright` `PyAutoGUI` `OpenCV` `pynput` `VLM APIs` `OOD`
+`Python` `Playwright` `Windows OCR` `OpenAI-compatible LLMs`
 
-[repo &rarr;](https://github.com/abhishek-pandey7/AURA---Automated-Realtime-Assistant)
+[repo &rarr;](https://github.com/abhishek-pandey7/AURA-Automated-Realtime-Assistant) &nbsp;&middot;&nbsp; [PyPI &rarr;](https://pypi.org/project/aura-autonomous-agent/)
+
+### Folio
+*Personal wealth tracker for Indian and US markets*
+
+For anyone holding Indian and US assets across several brokers. Folio values NSE and US stocks, ETFs and Indian mutual funds live, converts between INR and USD, and treats a transaction ledger as the only source of truth: holdings, cost basis, realized gains and XIRR are always derived from history, never edited by hand.
+
+<p align="center">
+  <img
+    src="https://raw.githubusercontent.com/abhishek-pandey7/Folio-Wealth-Tracker/main/docs/images/portfolio.png"
+    width="700"
+    alt="Folio portfolio page on sample data: current value, XIRR, allocation by asset class, and holdings across three brokers"
+  />
+</p>
+
+<table>
+<tr><td width="190"><b>Ledger</b></td>
+<td>Money stays decimal end to end: <code>NUMERIC</code> in Postgres, decimal strings on the wire, decimal libraries in code. Every sale replays against the account's history inside a row lock, so concurrent requests cannot oversell.</td></tr>
+<tr><td><b>Load testing</b></td>
+<td>The first benchmark showed rankings at 7 requests a second with a 9.9 s p90, traced to rate-limited cache refreshes. Stale-while-revalidate in the Go gateway took that to 713 requests a second with a 224 ms p99, measured locally.</td></tr>
+<tr><td><b>Two runtimes</b></td>
+<td>Framework-free business logic runs under NestJS locally and Hono on Cloudflare's free plan. Workers get 10 ms of CPU and keep no memory, so the Go gateway's caches became Postgres tables fed by a cron Worker, and a request only reads.</td></tr>
+<tr><td><b>Testing</b></td>
+<td>89% Go coverage and TypeScript tests against a real Postgres, run on every PR alongside <code>go test -race</code>.</td></tr>
+</table>
+
+`TypeScript` `React 19` `NestJS` `Go` `PostgreSQL` `Hono` `Cloudflare Workers`
+
+[repo &rarr;](https://github.com/abhishek-pandey7/Folio-Wealth-Tracker) &nbsp;&middot;&nbsp; [live &rarr;](https://folio-4u6.pages.dev)
+
+### Ekalavya
+*Machine-learning scan scheduler for electronic support receivers*
+
+A narrowband receiver hears roughly 1 GHz of an 18 GHz spectrum at a time, and a radar beam illuminates it for only milliseconds, so every dwell is a bet on where the next flash will be. Ekalavya learns each emitter's rhythm from what it has already heard, without prior intelligence on the emitters it will face, and spends its listening time where the return is highest. On real scenarios from the Turing dataset it caught 69.8% of interceptable flashes, against 16.8% for an open-loop sweep.
+
+<p align="center">
+  <img
+    src="https://raw.githubusercontent.com/abhishek-pandey7/Smart-Scan-strategy-for-Electronic-Warfare/main/docs/images/decision.png"
+    width="900"
+    alt="Ekalavya decision explorer showing a spectrum timeline beside the score, its terms, and the look the receiver chose"
+  />
+</p>
+
+<table>
+<tr><td width="190"><b>Decision</b></td>
+<td>Every pairing of band centre and dwell length gets one score, value per second of listening, built from expected catches, discovery and information gain. There is no neural network in the scheduler, so the demo can show the terms behind any look it took.</td></tr>
+<tr><td><b>Learning</b></td>
+<td>Emitter priors are learned offline from 2,500 Turing training scenarios, and periodic and Gilbert-Elliott track models update online from hits and misses.</td></tr>
+<tr><td><b>Benchmark</b></td>
+<td>610 runs with 95% bootstrap confidence intervals, replaying identical ground truth for every receiver, including a Double-DQN comparator. Interception rises from 1.0% to 69.1% under lock-out and from 9.9% to 65.9% with 40 emitters, and reaches 0.82 of a clairvoyant oracle on the real scenarios.</td></tr>
+</table>
+
+`Python` `FastAPI` `Next.js` `Stable-Baselines3`
+
+[repo &rarr;](https://github.com/abhishek-pandey7/Smart-Scan-strategy-for-Electronic-Warfare) &nbsp;&middot;&nbsp; [live &rarr;](https://ekalavya-arvada.pages.dev) &nbsp;&middot;&nbsp; [video &rarr;](https://www.youtube.com/watch?v=L4syRxecqos)
 
 ---
 
@@ -92,11 +148,47 @@ Most agent demos work once, on the recorded run, at the recorded resolution. AUR
 ## Other projects
 
 <table>
-<tr><td width="150"><b>Zero-Trust PII RAG</b></td>
+<tr><td width="150"><b>Homespun</b></td>
+<td>Speech models treat Awadhi as broken Hindi, so my grandparents' words get corrected away. A LoRA adapter on <code>whisper-small</code>, trained on three hours of speech, took everyday dialect words kept from 5% to 45% on a held-out test set and cut character error from 0.63 to 0.36. The adapter is 8.7 MB, and the demo runs in your browser with nothing uploaded.
+<br/>
+<code>Python</code> <code>Whisper</code> <code>LoRA</code> <code>PEFT</code> <code>Transformers.js</code> <code>ONNX</code><br/>
+<a href="https://github.com/abhishek-pandey7/Homespun-Voice">repo</a> &middot; <a href="https://homespun-awadhi.onrender.com/">live</a></td></tr>
+
+<tr><td><b>Kavach</b></td>
+<td>Listens to a phone call as it happens, recognises scam scripts in Indian languages, and speaks a warning into the call before any money moves. A keyword layer and a self-hosted LLM reading the whole call so far track how the tactics progress, and stay quiet while the evidence is thin. A working prototype: on synthetic Hindi calls over simulated phone lines it flagged 9 of 9 scams, with no false alarms on 9 genuine look-alikes.
+<br/>
+<code>Python</code> <code>Gnani AI</code> <code>Streaming STT</code> <code>TTS</code> <code>WebSocket</code><br/>
+<a href="https://github.com/abhishek-pandey7/Kavach-Realtime-Voice-Threat-Intelligence">repo</a></td></tr>
+
+<tr><td><b>Zero-Trust PII RAG</b></td>
 <td>Redacts and masks PII locally with Microsoft Presidio and a thread-safe SQLite vault, before any text reaches an external LLM. The model only ever sees opaque tokens like <code>&lt;&lt;PERSON_01_A1B2&gt;&gt;</code>, which the vault maps back to plaintext locally on the way out, so the sensitive string never crosses the network boundary and every redaction and lookup is audit-logged. Handles files past 1M characters.
 <br/>
 <code>Python</code> <code>Flask</code> <code>LangChain</code> <code>ChromaDB</code> <code>SQLite</code> <code>Presidio</code><br/>
 <a href="https://github.com/abhishek-pandey7/Zero-Trust-PII-RAG">repo</a> &middot; <a href="https://zero-trust-pii-rag.onrender.com/">live</a></td></tr>
+
+<tr><td><b>Soter&iacute;a</b></td>
+<td>Recall detection and lot-level containment for online grocery, built with a team. It watches openFDA, FDA, FSIS and RASFF feeds, has an LLM extract barcodes and lot codes behind deterministic guardrails, quarantines only the affected lots in Shopify, and logs every step to a verifiable hash chain. Twelve services on a message bus, run end to end against a live Shopify store with a real FDA notice.
+<br/>
+<code>Go</code> <code>TypeScript</code> <code>React</code> <code>RabbitMQ</code> <code>Shopify</code><br/>
+<a href="https://github.com/abhishek-pandey7/Soteria-Automated-Catalog-Delisting-and-Inventory-Quarantine">repo</a></td></tr>
+
+<tr><td><b>OJAS</b></td>
+<td>Objective judgement for academic sincerity: ranks exam-hall CCTV footage for human review instead of trying to auto-convict, with a signed custody ledger behind every verdict. One exam session can generate 9,600 camera-hours, so the real problem is deciding where a reviewer's few hours go, and the pipeline abstains rather than guess whenever the footage will not support a threshold. Our team won 1st Prize at the Drishti AI Hackathon by DEXIT Global.
+<br/>
+<code>Python</code> <code>Go</code> <code>Next.js</code> <code>OpenCV</code> <code>YOLOv8n</code> <code>Ed25519</code><br/>
+<a href="https://github.com/abhishek-pandey7/Objective-Judgement-for-Academic-Security">repo</a></td></tr>
+
+<tr><td><b>APEX</b></td>
+<td>Reconciles a ledger against custodian feeds and turns every difference into a break an operations analyst can resolve. The same inputs, rule version and configuration always produce byte-identical results, so a past day can be rerun for an auditor, and the database itself enforces the state machine and the two-person approval rule. Matching is deterministic: AI only classifies and explains the breaks left over, and never changes a match.
+<br/>
+<code>Go</code> <code>PostgreSQL</code> <code>pgvector</code> <code>React</code> <code>Groq</code><br/>
+<a href="https://github.com/abhishek-pandey7/APEX-Deterministic-Multi-Asset-Reconciliation-Engine">repo</a></td></tr>
+
+<tr><td><b>PitchLens</b></td>
+<td>Explainable, personalized match intelligence on synthetic football events, built for the Microsoft x Premier League Inside the Game hackathon. A deterministic pipeline computes every number inside a 300 ms budget, while AI agents narrate, localize and fact-check around it. One Rust kernel compiles to a PyO3 module, WebAssembly and a broadcast edge service, cutting tracking generation from 5.8 s to 0.024 s a match and serving 1,500 viewers from a laptop at a 188 ms p95.
+<br/>
+<code>Python</code> <code>Rust</code> <code>WebAssembly</code> <code>Next.js</code> <code>Microsoft Foundry</code> <code>Azure</code><br/>
+<a href="https://github.com/abhishek-pandey7/pitchlens">repo</a></td></tr>
 
 <tr><td><b>Fluxion</b></td>
 <td>Generates a whole data pipeline from one declarative YAML spec: idempotent Snowflake SQL, incremental dbt models with schema tests, and Airflow TaskFlow DAGs, so a pipeline is described once instead of hand-written three times. An LLM pass validates the spec first and proposes clustering keys and warehouse sizing, then approved assets commit straight to a feature branch to trigger existing CI.
@@ -110,34 +202,16 @@ Most agent demos work once, on the recorded run, at the recorded resolution. AUR
 <code>Astro</code> <code>React 19</code> <code>Hono</code> <code>Cloudflare Workers</code> <code>Prisma</code> <code>Neon Postgres</code> <code>Cloudflare R2</code><br/>
 <a href="https://mattisirvioartgalleria.com/">live</a></td></tr>
 
-<tr><td><b>OJAS</b></td>
-<td>Objective judgement for academic sincerity: ranks exam-hall CCTV footage for human review instead of trying to auto-convict, with a signed custody ledger behind every verdict. One exam session can generate 9,600 camera-hours, so the real problem is deciding where a reviewer's few hours go, and the pipeline abstains rather than guess whenever the footage will not support a threshold.
-<br/>
-<code>Python</code> <code>Go</code> <code>Next.js</code> <code>OpenCV</code> <code>YOLOv8n</code> <code>Ed25519</code><br/>
-<a href="https://github.com/abhishek-pandey7/Objective-Judgement-for-Academic-Security">repo</a></td></tr>
-
-<tr><td><b>Sunzee Holidays</b></td>
-<td>Marketing platform for a B2B travel agency selling East Africa and the Indian Ocean. Five destination landing routes generate from a single composable shell rather than five hand-maintained pages, on a custom design system rather than a themed template, with scroll reveals wired so content is still present at first paint for crawlers.
-<br/>
-<code>Next.js</code> <code>Tailwind CSS</code> <code>Framer Motion</code> <code>shadcn/ui</code></td></tr>
-
-<tr><td><b>Football Advisor MAS</b></td>
-<td>Multi-agent system on Google ADK coordinating specialist agents (input, opposition, tactics, scouting, finance) to answer natural-language football queries and suggest tactical counters. Naming an opponent triggers a research pass on how they actually play, and a financial agent audits the shortlist against the stated budget so nothing comes back that the club cannot afford.
-<br/>
-<code>Google ADK</code> <code>React</code> <code>Python</code> <code>Gemini</code><br/>
-<a href="https://github.com/abhishek-pandey7/Football-Advisor-MAS">repo</a></td></tr>
-
 <tr><td><b>SpineIQ</b></td>
 <td>Spinal rehab ecosystem tracking 33 skeletal landmarks in real time with MediaPipe Pose, streaming metrics over WebSocket at sub-30ms latency, with a clinical dashboard and a recovery chatbot. Form is scored across 20+ prescribed exercises so a dropped hip or an over-arched back is corrected as it happens rather than at the next appointment.
 <br/>
 <code>React</code> <code>FastAPI</code> <code>MediaPipe</code> <code>LangGraph</code> <code>Supabase</code> <code>Gemini</code><br/>
 <a href="https://github.com/abhishek-pandey7/Spine-Guard">repo</a></td></tr>
 
-<tr><td><b>CampusNav</b></td>
-<td>Browser-based AR campus navigation overlaying directional cues on the live camera feed, using DeviceOrientation compass tracking, OSRM road routing, and spoken prompts. Real road paths fall back to a straight-line bearing when routing fails, voice announcements fire at distance milestones, and a one-tap emergency mode routes to the nearest hospital, pharmacy or police station.
+<tr><td><b>Sunzee Holidays</b></td>
+<td>Marketing platform for a B2B travel agency selling East Africa and the Indian Ocean. Five destination landing routes generate from a single composable shell rather than five hand-maintained pages, on a custom design system rather than a themed template, with scroll reveals wired so content is still present at first paint for crawlers.
 <br/>
-<code>JavaScript</code> <code>HTML5/CSS3</code> <code>OSRM API</code> <code>Geolocation API</code><br/>
-<a href="https://github.com/abhishek-pandey7/CampusNav">repo</a></td></tr>
+<code>Next.js</code> <code>Tailwind CSS</code> <code>Framer Motion</code> <code>shadcn/ui</code></td></tr>
 </table>
 
 ---
