@@ -173,6 +173,34 @@ No logo exists for the half that mattered most: the Observe/Think/Act/Verify loo
 
 ---
 
+## Activity
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/abhishek-pandey7/abhishek-pandey7/output/snake-contribution-graph-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/abhishek-pandey7/abhishek-pandey7/output/snake-contribution-graph.svg" />
+    <img
+      src="https://raw.githubusercontent.com/abhishek-pandey7/abhishek-pandey7/output/snake-contribution-graph.svg"
+      width="900"
+      alt="Animated snake eating the cells of my GitHub contribution graph for the past year"
+    />
+  </picture>
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/abhishek-pandey7/abhishek-pandey7/output/pacman-contribution-graph-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/abhishek-pandey7/abhishek-pandey7/output/pacman-contribution-graph.svg" />
+    <img
+      src="https://raw.githubusercontent.com/abhishek-pandey7/abhishek-pandey7/output/pacman-contribution-graph.svg"
+      width="900"
+      alt="Animated Pac-Man clearing my GitHub contribution graph for the past year while ghosts give chase"
+    />
+  </picture>
+</p>
+
+---
+
 ## Reach me
 
 <table>
