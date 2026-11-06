@@ -220,6 +220,18 @@ A narrowband receiver hears roughly 1 GHz of an 18 GHz spectrum at a time, and a
 
 ## Research
 
+### Risk-controlled prompt compression for LLMs
+*Pre-registered team study &middot; Sep 2026 to present*
+
+Prompt compression is usually judged by average task quality, but a deployment needs a bound on how often compression changes the answer. We study compression for black-box models under that hard limit, where any policy that ignores the individual request is capped by a minority of requests that break at every compression level. A small canary model that answers the question first can pick those requests out, but only if it is large enough.
+
+In a pre-registered test across 22K+ reader calls on an 8B reader, at a matched 5% rate of answer changes, a 1.7B canary lifted compression savings from 14.6% to 22.4%, while a 0.6B canary gave no reliable gain. No canary repays its own compute on a reader that small, so a pre-registered transfer study on a 70B reader, the size where it is projected to pay for itself, is now running.
+
+### Concurrency anomalies in multi-agent LLM systems
+*Team study &middot; started Nov 2026 &middot; in progress, no results yet*
+
+Agents that share mutable state follow the same loop: read the state, spend seconds generating a response, write back. A database transaction holds that window for microseconds, so collisions that are rare there become routine here, and every agent still looks correct on its own: an edit silently overwritten, a ticket routed on stale information, two agents confirming the last seat, a customer charged twice. We are building a benchmark to measure how often this happens in the frameworks developers actually use.
+
 ### Position-aware benchmarking for long-context LLMs
 *DJ Init.AI &middot; Nov 2025 to Jun 2026*
 
