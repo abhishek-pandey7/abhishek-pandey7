@@ -176,6 +176,14 @@ No logo exists for the half that mattered most: the Observe/Think/Act/Verify loo
 ## Activity
 
 <p align="center">
+  <img
+    src="https://raw.githubusercontent.com/abhishek-pandey7/abhishek-pandey7/output/3d-contribution-graph.svg"
+    width="900"
+    alt="3D isometric view of my GitHub contribution calendar for the past year, with a radar chart of contribution types and a breakdown of languages"
+  />
+</p>
+
+<p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/abhishek-pandey7/abhishek-pandey7/output/snake-contribution-graph-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/abhishek-pandey7/abhishek-pandey7/output/snake-contribution-graph.svg" />

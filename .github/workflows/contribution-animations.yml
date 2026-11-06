@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: '17 0 * * *'
   workflow_dispatch:
+  push:
+    branches:
+      - contribution-animations # temporary, for testing before merge
 
 permissions: {}
 
@@ -27,6 +30,15 @@ jobs:
         with:
           github_user_name: ${{ github.repository_owner }}
           games: pacman
+
+      - name: Generate 3D calendar
+        uses: yoshi389111/github-profile-3d-contrib@7d95e7d4cdc028dd1e1cbd957d65f35efb12ae39 # v0.9.3
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          USERNAME: ${{ github.repository_owner }}
+
+      - name: Keep the night-rainbow theme
+        run: cp profile-3d-contrib/profile-night-rainbow.svg dist/3d-contribution-graph.svg
 
       - name: Keep SVGs for the publish job
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
