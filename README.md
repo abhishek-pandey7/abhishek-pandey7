@@ -66,9 +66,9 @@ Most agent demos work once, on the recorded run, at the recorded resolution. AUR
 
 <p align="center">
   <img
-    src="https://raw.githubusercontent.com/abhishek-pandey7/AURA-Automated-Realtime-Assistant/main/docs/demos/voice-cnn.gif"
+    src="https://raw.githubusercontent.com/abhishek-pandey7/AURA-Automated-Realtime-Assistant/main/docs/demos/jiohotstar.gif"
     width="900"
-    alt="AURA taking a spoken request in the terminal, planning it, and writing a PyTorch CNN for MNIST"
+    alt="AURA taking one prompt in the terminal, then opening JioHotstar from the Start menu, searching for RCB vs DC highlights and playing the video"
   />
 </p>
 
